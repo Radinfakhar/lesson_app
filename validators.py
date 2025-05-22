@@ -9,12 +9,17 @@ def person_validator(person):
     if not (type(person[1]) == str and re.match(r"^[a-zA-Z\s]{3,30}$", person[1])):
         errors.append('esmdars is Invalid')
 
-
-    if not (type(person[2]) == str and re.match(r"^[a-zA-Z\s]{3,30}$", person[2])):
+    if not (type(person[2]) == int and person[2] > 0):
         errors.append('grade is Invalid')
 
-    if not (type(person[3]) == int and person[3]>0):
+    if not (type(person[3]) == str and re.match(r"^[a-zA-Z\s]{3,30}$", person[3])):
         errors.append('teacher is Invalid')
+
+    if not (type(person[4]) == str and re.match(r"^[a-zA-Z\s]{3,30}$", person[4])):
+        errors.append('startdate is Invalid')
+
+    if not (type(person[5]) == int and person[5] > 0):
+        errors.append('duration is Invalid')
 
     return errors
 
