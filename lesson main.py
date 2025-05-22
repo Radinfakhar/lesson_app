@@ -61,7 +61,7 @@ def remove_btn_click():
 
 window = Tk()
 window.title("Person Info")
-window.geometry("800x400")
+window.geometry("800x330")
 
 # Id
 Label(window, text="Id").place(x=20, y=20)
@@ -110,7 +110,7 @@ table.column(6, width=100)
 
 table.bind("<<TreeviewSelect>>", table_select)
 
-table.place(x=230, y=20)
+table.place(x=230, y=20, width=550, height=285)
 
 Button(window, text="Save", width=6, command=save_btn_click).place(x=20, y=280)
 Button(window, text="Edit", width=6, command=edit_btn_click).place(x=90, y=280)
